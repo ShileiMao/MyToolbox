@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6106865A2539032E00A85944 /* MString.c in Sources */ = {isa = PBXBuildFile; fileRef = 610686592539032E00A85944 /* MString.c */; };
 		612C5C5725389DC4008700F2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 612C5C5625389DC4008700F2 /* main.c */; };
 		612C5C6025389E15008700F2 /* FileOperator.c in Sources */ = {isa = PBXBuildFile; fileRef = 612C5C5F25389E15008700F2 /* FileOperator.c */; };
+		612C5C992538F2D2008700F2 /* StandardOut.c in Sources */ = {isa = PBXBuildFile; fileRef = 612C5C982538F2D2008700F2 /* StandardOut.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +26,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		612C5C5325389DC4008700F2 /* ShileiToolbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ShileiToolbox; sourceTree = BUILT_PRODUCTS_DIR; };
+		610686582539032E00A85944 /* MString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MString.h; sourceTree = "<group>"; };
+		610686592539032E00A85944 /* MString.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MString.c; sourceTree = "<group>"; };
+		612C5C5325389DC4008700F2 /* MyToolbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyToolbox; sourceTree = BUILT_PRODUCTS_DIR; };
 		612C5C5625389DC4008700F2 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		612C5C5E25389E15008700F2 /* FileOperator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileOperator.h; sourceTree = "<group>"; };
 		612C5C5F25389E15008700F2 /* FileOperator.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FileOperator.c; sourceTree = "<group>"; };
+		612C5C972538F2D2008700F2 /* StandardOut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StandardOut.h; sourceTree = "<group>"; };
+		612C5C982538F2D2008700F2 /* StandardOut.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StandardOut.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,10 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61068657253902FE00A85944 /* DataKit */ = {
+			isa = PBXGroup;
+			children = (
+				610686582539032E00A85944 /* MString.h */,
+				610686592539032E00A85944 /* MString.c */,
+			);
+			path = DataKit;
+			sourceTree = "<group>";
+		};
 		612C5C4A25389DC4008700F2 = {
 			isa = PBXGroup;
 			children = (
-				612C5C5525389DC4008700F2 /* ShileiToolbox */,
+				612C5C5525389DC4008700F2 /* MyToolbox */,
 				612C5C5425389DC4008700F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,27 +67,46 @@
 		612C5C5425389DC4008700F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				612C5C5325389DC4008700F2 /* ShileiToolbox */,
+				612C5C5325389DC4008700F2 /* MyToolbox */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		612C5C5525389DC4008700F2 /* ShileiToolbox */ = {
+		612C5C5525389DC4008700F2 /* MyToolbox */ = {
 			isa = PBXGroup;
 			children = (
+				61068657253902FE00A85944 /* DataKit */,
+				612C5C962538F288008700F2 /* Utils */,
+				612C5C952538EF54008700F2 /* MyFileKit */,
 				612C5C5625389DC4008700F2 /* main.c */,
+			);
+			path = MyToolbox;
+			sourceTree = "<group>";
+		};
+		612C5C952538EF54008700F2 /* MyFileKit */ = {
+			isa = PBXGroup;
+			children = (
 				612C5C5E25389E15008700F2 /* FileOperator.h */,
 				612C5C5F25389E15008700F2 /* FileOperator.c */,
 			);
-			path = ShileiToolbox;
+			path = MyFileKit;
+			sourceTree = "<group>";
+		};
+		612C5C962538F288008700F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				612C5C972538F2D2008700F2 /* StandardOut.h */,
+				612C5C982538F2D2008700F2 /* StandardOut.c */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		612C5C5225389DC4008700F2 /* ShileiToolbox */ = {
+		612C5C5225389DC4008700F2 /* MyToolbox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 612C5C5A25389DC4008700F2 /* Build configuration list for PBXNativeTarget "ShileiToolbox" */;
+			buildConfigurationList = 612C5C5A25389DC4008700F2 /* Build configuration list for PBXNativeTarget "MyToolbox" */;
 			buildPhases = (
 				612C5C4F25389DC4008700F2 /* Sources */,
 				612C5C5025389DC4008700F2 /* Frameworks */,
@@ -82,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = ShileiToolbox;
+			name = MyToolbox;
 			productName = ShileiToolbox;
-			productReference = 612C5C5325389DC4008700F2 /* ShileiToolbox */;
+			productReference = 612C5C5325389DC4008700F2 /* MyToolbox */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 612C5C4E25389DC4008700F2 /* Build configuration list for PBXProject "ShileiToolbox" */;
+			buildConfigurationList = 612C5C4E25389DC4008700F2 /* Build configuration list for PBXProject "MyToolbox" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				612C5C5225389DC4008700F2 /* ShileiToolbox */,
+				612C5C5225389DC4008700F2 /* MyToolbox */,
 			);
 		};
 /* End PBXProject section */
@@ -123,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612C5C992538F2D2008700F2 /* StandardOut.c in Sources */,
 				612C5C5725389DC4008700F2 /* main.c in Sources */,
+				6106865A2539032E00A85944 /* MString.c in Sources */,
 				612C5C6025389E15008700F2 /* FileOperator.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +301,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		612C5C4E25389DC4008700F2 /* Build configuration list for PBXProject "ShileiToolbox" */ = {
+		612C5C4E25389DC4008700F2 /* Build configuration list for PBXProject "MyToolbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				612C5C5825389DC4008700F2 /* Debug */,
@@ -274,7 +310,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		612C5C5A25389DC4008700F2 /* Build configuration list for PBXNativeTarget "ShileiToolbox" */ = {
+		612C5C5A25389DC4008700F2 /* Build configuration list for PBXNativeTarget "MyToolbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				612C5C5B25389DC4008700F2 /* Debug */,

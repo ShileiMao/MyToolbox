@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "FileOperator.h"
+#include "StandardOut.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -26,7 +27,7 @@ int main(int argc, const char * argv[]) {
         
         char * fileData = (char* ) malloc(fileSize);
         while (readLen < fileSize) {
-            size_t tempLen = readBytes(file, buffer, 1, 10);
+            size_t tempLen = readBytes(buffer, 1, 10, file);
             if (tempLen > 0) {
                 memcpy(fileData + readLen, buffer, tempLen);
                 readLen += tempLen;
